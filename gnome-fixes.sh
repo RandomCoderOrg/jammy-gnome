@@ -10,5 +10,9 @@ for file in $(find /usr -type f -iname "*login1*"); do
     mv -v $file "$file.back"
 done
 
-# disable org.freedesktop.login1 for gdm
+# fix issue with set-uid helper permission
+# issue: gnome-shell fails to start cause it can't execute set-uid helper
+# solution: set permissions u+s for set-uid helper on every bashrc execution
 
+echo "# fix issue with set-uid helper permission" >> ~/.bashrc
+echo "sudo chmod u+s /usr/lib/dbus-1.0/dbus-daemon-launch-helper" >> ~/.bashrc
