@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo apt-get install -y gnome-shell \
+    gnome-shell-* \
     dbus-x11 \
     gnome-terminal \
     gnome-accessibility-themes \
