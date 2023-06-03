@@ -16,3 +16,10 @@ done
 
 echo "# fix issue with set-uid helper permission" >> ~/.bashrc
 echo "sudo chmod u+s /usr/lib/dbus-1.0/dbus-daemon-launch-helper" >> ~/.bashrc
+
+# Remove sound menu from gnome control center
+# issue: gnome-control-center crashes when sound menu is clicked
+# solution: remove sound menu from gnome-control-center by moving it to a different location
+
+mv -v /usr/share/applications/gnome-sound-panel.desktop /usr/share/applications/gnome-sound-panel.desktop.back
+
