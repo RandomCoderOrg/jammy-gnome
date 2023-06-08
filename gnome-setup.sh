@@ -22,3 +22,7 @@ sudo apt-get install -y gnome-shell \
     ubuntu-restricted-extras \
     yaru-*
 
+# load dconf settings
+if [ -f /jammy.dconf.conf ]; then
+    dconf load / < /jammy.dconf.conf
+fi
