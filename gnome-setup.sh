@@ -17,6 +17,7 @@ sudo apt-get install -y gnome-shell \
     gnome-user-docs \
     gnome-video-effects \
     gnome-tweaks \
+    gnome-software \
     firefox \
     mesa-utils \
     ubuntu-restricted-extras \
