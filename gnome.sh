@@ -67,7 +67,8 @@ run_cmd "rm /pv-${t_arch}.deb"
 apt-get clean
 
 # move dconf config to root for installation
-move_to_chroot "$SUITE-dconf.conf" ""
+cp "$SUITE-dconf.conf" "$chroot_dir/jammy.dconf.conf"
+
 # exec $VARIENT-setup.sh
 run_shell_script "$VARIENT-setup.sh"
 
@@ -79,12 +80,6 @@ run_shell_script "$VARIENT-fixes.sh"
 
 # cleanup
 run_shell_script "$VARIENT-cleanup.sh"
-}
-
-move_to_chroot() {
-    local file="$1"
-    local dest="$2"
-    cp -v "$file" "$chroot_dir/$dest"
 }
 
 # Option to build specific arch
