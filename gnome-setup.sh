@@ -26,7 +26,6 @@ sudo apt-get install -y gnome-shell \
     gnome-software \
     firefox \
     mesa-utils \
-    ubuntu-restricted-extras \
     yaru-*
 
 # load dconf settings
