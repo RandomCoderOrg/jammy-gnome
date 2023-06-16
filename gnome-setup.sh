@@ -36,4 +36,6 @@ if [ -f /jammy.dconf.conf ]; then
     dconf load / < /jammy.dconf.conf || {
         echo -e "\t: dconf load failed.."
     }
+else
+    echo -e "\t: dconf file not found.."
 fi
