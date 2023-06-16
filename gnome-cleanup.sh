@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # TODO: add more
-apt remove -y \
+apt-get remove -y \
     gnome-power-manager \
     gnome-bluetooth*
 

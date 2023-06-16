@@ -1,5 +1,11 @@
 #!/bin/bash
 
+export DEBIAN_FRONTEND=noninteractive
+export DEBCONF_NONINTERACTIVE_SEEN=true
+export LC_ALL=C
+export LANGUAGE=C
+export LANG=C
+
 sudo apt-get update
 
 sudo apt-get install -y gnome-shell \

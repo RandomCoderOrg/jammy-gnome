@@ -1,5 +1,11 @@
 #!/bin/bash
 
+export DEBIAN_FRONTEND=noninteractive
+export DEBCONF_NONINTERACTIVE_SEEN=true
+export LC_ALL=C
+export LANGUAGE=C
+export LANG=C
+
 install_firefox() {
     # trigger normal installation to resolve all dependencies (fonts)
     apt-get install -y firefox
