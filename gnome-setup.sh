@@ -11,9 +11,7 @@ sudo apt-get install -y gnome-shell \
     gnome-control-center* \
     gnome-desktop3-data \
     gnome-initial-setup \
-    gnome-logs \
     gnome-menus \
-    gnome-online-accounts \
     gnome-text-editor \
     gnome-themes-extra* \
     gnome-user-docs \
@@ -27,5 +25,7 @@ sudo apt-get install -y gnome-shell \
 
 # load dconf settings
 if [ -f /jammy.dconf.conf ]; then
-    dconf load / < /jammy.dconf.conf
+    XDG_RUNTIME_DIR="/tmp" dconf load / < /jammy.dconf.conf || {
+        echo -e "\t: dconf load failed.."
+    }
 fi
