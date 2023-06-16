@@ -67,7 +67,7 @@ run_cmd "rm /pv-${t_arch}.deb"
 apt-get clean
 
 # move dconf config to root for installation
-cp "$SUITE-dconf.conf" "$chroot_dir/jammy.dconf.conf"
+COPY "$SUITE.dconf.conf"
 
 # exec $VARIENT-setup.sh
 run_shell_script "$VARIENT-setup.sh"
