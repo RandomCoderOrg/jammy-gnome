@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt-get update
+
 sudo apt-get install -y gnome-shell \
     gnome-shell-* \
     dbus-x11 \
