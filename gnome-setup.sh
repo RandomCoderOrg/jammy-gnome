@@ -31,7 +31,10 @@ sudo apt-get install -y gnome-shell \
 
 # load dconf settings
 if [ -f /jammy.dconf.conf ]; then
-    XDG_RUNTIME_DIR="/tmp" dconf load / < /jammy.dconf.conf || {
+    # export dbus session address
+    export $(dbus-launch)
+
+    dconf load / < /jammy.dconf.conf || {
         echo -e "\t: dconf load failed.."
     }
 fi
