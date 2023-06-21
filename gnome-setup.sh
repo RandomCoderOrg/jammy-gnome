@@ -24,6 +24,7 @@ sudo apt-get install -y gnome-shell \
     gnome-video-effects \
     gnome-tweaks \
     gnome-software \
+    language-pack-en-base \
     firefox \
     mesa-utils \
     yaru-*
