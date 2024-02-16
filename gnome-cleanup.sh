@@ -3,7 +3,7 @@
 # TODO: add more
 apt-get remove -y \
     gnome-power-manager \
-    gnome-bluetooth*
+    gnome-bluetooth
 
 # clean up apt cache
 apt-get clean
